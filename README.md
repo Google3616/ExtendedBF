@@ -1,9 +1,9 @@
-# **EXTENDED BRAINFUCK**
+# **EXTENDED BRAINf\*\*k**
 
-Have you ever heard of traditional Brainfuck? It's a coding language designed to be incredibly stupid, tedious, aggressively inefficient, and to, as its' title states, fuck with your brain.
-ExtendedBF takes this idea and takes it to a whole new level of brainfuckery. You can set up custom interpreters, import built-in libraries that can handle graphics, pseudorandom functionalities, and even design your own modules to add on to this *wonderful* language. 
+Have you ever heard of traditional Brainf\*\*k? It's a coding language designed to be incredibly stupid, tedious, aggressively inefficient, and to, as its' title states, f\*\*k with your brain.
+ExtendedBF takes this idea and takes it to a whole new level of brainf\*\*kery. You can set up custom interpreters, import built-in libraries that can handle graphics, pseudorandom functionalities, and even design your own modules to add on to this *wonderful* language. 
 
-Brainfuck's form of coding is purely whimsical. It is based on a three-thousand-celled mutable array called a stack, initially filled with zeroed out indexes.
+Brainf\*\*k's form of coding is purely whimsical. It is based on a three-thousand-celled mutable array called a stack, initially filled with zeroed out indexes.
 
 ```
 [0][0][0][0][0][0][0][0] ... [0]
@@ -24,7 +24,7 @@ And you can increment and decrement the stack index you are by one.
  ^ #increment by 1
 ```
  
-You can also print the current cell, ask for user input, and loop commands. Here is the lexicon for the basic Brainfuck language:
+You can also print the current cell, ask for user input, and loop commands. Here is the lexicon for the basic Brainf\*\*k language:
 
 ```
 <     move left in the stack
