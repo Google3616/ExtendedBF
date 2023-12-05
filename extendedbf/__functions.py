@@ -169,7 +169,7 @@ def __hexify(number):
       case "111":
         return("FF")
       case _:
-        return("fuck you")
+        return("f**k you")
   elif len(number) == 2:
     match number:
       case "00":
@@ -181,6 +181,6 @@ def __hexify(number):
       case "11":
         return("FF")
       case _:
-        return("fuck you")
+        return("f**k you")
   else:
-    return("fuck you")
+    return("f**k you")
