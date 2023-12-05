@@ -1,4 +1,4 @@
-# **EXTENDED BRAINf\*\*k**
+# **EXTENDED BRAINF\*\*K**
 
 Have you ever heard of traditional Brainf\*\*k? It's a coding language designed to be incredibly stupid, tedious, aggressively inefficient, and to, as its' title states, f\*\*k with your brain.
 ExtendedBF takes this idea and takes it to a whole new level of brainf\*\*kery. You can set up custom interpreters, import built-in libraries that can handle graphics, pseudorandom functionalities, and even design your own modules to add on to this *wonderful* language. 
