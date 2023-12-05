@@ -65,41 +65,42 @@ class Interpreter:
     levelMask = sepLvls(prgm)
   
     while prgmPtr < len(prgm):
-    
+
       if prgm[prgmPtr] == ">":
         if stackPtr < len(stack):
           stackPtr += 1
         else:
           pass
 
-      if prgm[prgmPtr] == "<":
+      elif prgm[prgmPtr] == "<":
         if stackPtr > 0:
           stackPtr -= 1
         else:
           pass
 
-      if prgm[prgmPtr] == "+":
+      elif prgm[prgmPtr] == "+":
         if stack[stackPtr] < 255:
            stack[stackPtr] += 1
         else:
            stack[stackPtr] = 0
 
-      if prgm[prgmPtr] == "-":
+      elif prgm[prgmPtr] == "-":
         if stack[stackPtr] > 0:
           stack[stackPtr] -= 1
         else:
           stack[stackPtr] = 255
 
-      if prgm[prgmPtr] == "[":
+      elif prgm[prgmPtr] == "[":
         count += 1
-        if int(stack[stackPtr]) == 0:
+        if int(stack[stackPtr]) < 1:
           prgmPtr = levelMask.locateEnd(count,prgmPtr) 
 
-      if prgm[prgmPtr] == "]":
+
+      elif prgm[prgmPtr] == "]":
         prgmPtr = levelMask.locateEnd(count,prgmPtr,True) - 1
         count -= 1
 
-      if prgm[prgmPtr] == ".":
+      elif prgm[prgmPtr] == ".":
         try:
           if prgm[prgmPtr + 1] == "C":
            print(chr(int(stack[stackPtr])),end="")
@@ -108,7 +109,7 @@ class Interpreter:
         except IndexError:
           print(str(stack[stackPtr]),end="")
         
-      if prgm[prgmPtr] == ",":
+      elif prgm[prgmPtr] == ",":
         inp = input("type smthn")
         try:
           if prgm[prgmPtr + 1] == "C":
@@ -118,16 +119,14 @@ class Interpreter:
         except IndexError:
           stack[stackPtr] = int(inp)
 
-      if prgm[prgmPtr] == "C":
+      elif prgm[prgmPtr] == "C":
         pass
 
-      if prgm[prgmPtr] == "*":
-        __push(stack,self.__draw)
-
-      for library in self.libs:
-        for char in library.chars:
-          if prgm[prgmPtr] == char:
-            prgmPtr, stackPtr, prgm, stack = library.chars[char](prgmPtr,stackPtr,prgm,stack)
+      else:
+        for library in self.libs:
+          for char in library.chars:
+            if prgm[prgmPtr] == char:
+              prgmPtr, stackPtr, prgm, stack = library.chars[char](prgmPtr,stackPtr,prgm,stack)
         
       prgmPtr += 1
 
