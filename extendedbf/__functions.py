@@ -57,7 +57,7 @@ class Interpreter:
       prgm = prgmFile.read().replace("\n","")
       prgmFile.close()
 
-    stack = [0] * 1000
+    stack = [0] * 30000
     stackPtr = 0
     prgmPtr = 0
     count = 0
@@ -127,7 +127,7 @@ class Interpreter:
           for char in library.chars:
             if prgm[prgmPtr] == char:
               prgmPtr, stackPtr, prgm, stack = library.chars[char](prgmPtr,stackPtr,prgm,stack)
-        
+
       prgmPtr += 1
 
 

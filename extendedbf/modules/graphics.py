@@ -18,10 +18,11 @@ def setPxl(prgmPtr, stackPtr, prgm, stack):
 def getPxl(prgmPtr, stackPtr, prgm, stack):
   stack[stackPtr] = screen[stack[posPtr[0]]][stack[posPtr[1]]]
   return prgmPtr, stackPtr, prgm, stack
+
 def draw(prgmPtr, stackPtr, prgm, stack):
   for i in screen:
     for j in i:
-      print(j,end="")
+      print("["+str("0" * (2 - len(str(j[0])))) + str(j).replace("[",""),end="")
     print("")
   return prgmPtr, stackPtr, prgm, stack
   
