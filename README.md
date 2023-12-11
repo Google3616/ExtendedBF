@@ -68,3 +68,13 @@ Let's break this down. Mainly, this program runs off of a loop. Loops will run t
 [0][0][0][0][0][0][0][0] ... [0]
  ^ #stops loop because current stack point is 0
 ```
+
+ExtendedBF has added a few new characters to this lexicon to aid in the simplicity of the language.
+
+```
+".C", ",C ", ".I", and ",I":
+If you add a capital "C" or "I" in front of a print command or input command, it will input or print the ASCII character or integer value of the cell value, respectively. For example, if the cell value is 33 and you call ".I", it will display "33", but if you call ".C", it will display "!" as it's ASCII value is 33 (https://www.asciitable.com/). If you leave it without the added "C" and "I", it will default to printing or inputting the integer value.
+
+E.X. +++++.   -> 5
+     
+```
